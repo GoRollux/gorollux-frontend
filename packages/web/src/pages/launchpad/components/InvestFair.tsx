@@ -613,7 +613,7 @@ export const InvestFair = defineComponent({
         return console.warn('chain id is not match!')
       }
       if (mode.value === 'buy') {
-        const sellAmount = ethers.utils.parseUnits(toValue.value)
+        const sellAmount = ethers.utils.parseUnits(toValue.value, props.info.sell_token_decimals)
         if (buyIsMainCoin.value) {
           await buyFromMainCoin(sellAmount)
         } else {
