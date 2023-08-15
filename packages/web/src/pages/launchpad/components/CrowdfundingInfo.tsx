@@ -6,7 +6,6 @@ import { CoinType } from '../[id]'
 import { findRouterByAddress, allNetworks } from '@/constants'
 import { useErc20Contract } from '@/contracts'
 import { ServiceReturn } from '@/services'
-import { useWalletStore } from '@/stores'
 import { getChainInfoByChainId } from '@/utils/etherscan'
 
 export const CrowdfundingInfo = defineComponent({
@@ -18,8 +17,6 @@ export const CrowdfundingInfo = defineComponent({
     }
   },
   setup(props) {
-    const { chainId } = useWalletStore()
-    const networkInfo = getChainInfoByChainId(chainId!)
     const buyCoinInfo = ref<CoinType>({})
     const sellCoinInfo = ref<CoinType>({})
 
@@ -124,11 +121,7 @@ export const CrowdfundingInfo = defineComponent({
           <div class="text-primary">
             <a
               target="_blank"
-              href={
-                networkInfo?.explorerUrl
-                  ? `${blockchainExplorerUrl.value}/address/${props.info.crowdfunding_contract}`
-                  : '#'
-              }
+              href={`${blockchainExplorerUrl.value}/address/${props.info.crowdfunding_contract}`}
             >
               {props.info.crowdfunding_contract}
             </a>
@@ -137,11 +130,7 @@ export const CrowdfundingInfo = defineComponent({
           <div class="text-primary">
             <a
               target="_blank"
-              href={
-                networkInfo?.explorerUrl
-                  ? `${blockchainExplorerUrl.value}/address/${props.info.team_wallet}`
-                  : '#'
-              }
+              href={`${blockchainExplorerUrl.value}/address/${props.info.team_wallet}`}
             >
               {props.info.team_wallet}
             </a>
@@ -150,11 +139,7 @@ export const CrowdfundingInfo = defineComponent({
           <div class="text-primary">
             <a
               target="_blank"
-              href={
-                networkInfo?.explorerUrl
-                  ? `${blockchainExplorerUrl.value}/address/${props.info.sell_token_contract}`
-                  : '#'
-              }
+              href={`${blockchainExplorerUrl.value}/address/${props.info.sell_token_contract}`}
             >
               {props.info.sell_token_contract}
             </a>
