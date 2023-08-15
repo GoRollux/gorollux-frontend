@@ -3,7 +3,7 @@ import dayjs from 'dayjs'
 import { ethers } from 'ethers'
 import { defineComponent, PropType, ref, computed } from 'vue'
 import { CoinType } from '../[id]'
-import { findRouterByAddress } from '@/constants'
+import { findRouterByAddress, allNetworks } from '@/constants'
 import { useErc20Contract } from '@/contracts'
 import { ServiceReturn } from '@/services'
 import { useWalletStore } from '@/stores'
@@ -89,6 +89,12 @@ export const CrowdfundingInfo = defineComponent({
     getSellTokenInfo()
 
     const isManualListing = props.info.dex_router === '0x0000000000000000000000000000000000000000'
+    const blockchainExplorerUrl = computed(
+      () =>
+        allNetworks.find(item => {
+          return item.chainId === props.info.chain_id
+        })?.explorerUrl
+    )
 
     return () => (
       <UCard>
@@ -124,7 +130,7 @@ export const CrowdfundingInfo = defineComponent({
               target="_blank"
               href={
                 networkInfo?.explorerUrl
-                  ? `${networkInfo?.explorerUrl}/address/${props.info.contract_address}`
+                  ? `${blockchainExplorerUrl.value}/address/${props.info.contract_address}`
                   : '#'
               }
             >
@@ -137,7 +143,7 @@ export const CrowdfundingInfo = defineComponent({
               target="_blank"
               href={
                 networkInfo?.explorerUrl
-                  ? `${networkInfo?.explorerUrl}/address/${props.info.team_wallet}`
+                  ? `${blockchainExplorerUrl.value}/address/${props.info.team_wallet}`
                   : '#'
               }
             >
@@ -150,7 +156,7 @@ export const CrowdfundingInfo = defineComponent({
               target="_blank"
               href={
                 networkInfo?.explorerUrl
-                  ? `${networkInfo?.explorerUrl}/address/${props.info.presale_token_contract}`
+                  ? `${blockchainExplorerUrl.value}/address/${props.info.presale_token_contract}`
                   : '#'
               }
             >
