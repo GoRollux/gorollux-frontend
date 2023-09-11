@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter,useRoute } from 'vue-router'
 import { landingRoute } from '@/hooks'
 
 const LandingPage = defineComponent({
@@ -7,6 +7,7 @@ const LandingPage = defineComponent({
   setup() {
     const router = useRouter()
     router.replace(landingRoute)
+    const route = useRoute()
     return () => null
   }
 })

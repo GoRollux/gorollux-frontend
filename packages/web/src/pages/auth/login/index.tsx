@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router'
 
 import Background from '@/components/widgets/background'
 import Benefits from '@/components/widgets/benefits'
-import BgImage from '@/components/widgets/bgImage'
+// import BgImage from '@/components/widgets/bgImage'
 import Comunion from '@/components/widgets/comunion'
 import Ecomomy from '@/components/widgets/ecomomy'
 import Future from '@/components/widgets/future'
@@ -64,7 +64,7 @@ export default defineComponent({
     const currentYear = new Date().getFullYear()
     return (
       <div class="bg-[#ededf2]">
-        <BgImage />
+        {/* <BgImage /> */}
         <Background />
         <Header />
         <Overview />

@@ -68,13 +68,22 @@ const TheHeader = defineComponent({
           subMenu: MarketplaceSubMenu
         },
         {
-          name: 'Chart',
+          name: 'TokenChart',
           icon: (
             <ShareOutlined
               class={globalConfigStore.isLargeScreen ? 'h-3.5 w-3.5' : 'h-4 w-4 text-color2'}
             />
           ),
           link: '//wechart.io/rollux'
+        },
+        {
+          name: 'L2Fees',
+          icon: (
+            <ShareOutlined
+              class={globalConfigStore.isLargeScreen ? 'h-3.5 w-3.5' : 'h-4 w-4 text-color2'}
+            />
+          ),
+          link: '//l2fees.info/'
         }
       ]
     })
