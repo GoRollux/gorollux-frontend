@@ -85,7 +85,7 @@ export default defineComponent({
               style={{
                 '--n-border-radius': '2px'
               }}
-              onClick={()=>this.router.push('/project/list')}
+              onClick={() => this.router.push('/project/list')}
             >
               Launch app
             </UButton>

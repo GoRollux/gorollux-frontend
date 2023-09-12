@@ -83,7 +83,7 @@ export default defineConfig({
           let route: { path: string; name: string } | undefined = undefined
           route = temp_routes.find(gra => gra.path === item)
           if (route) {
-            morePath[item].forEach(curr=>{
+            morePath[item].forEach(curr => {
               route = JSON.parse(JSON.stringify(route))
               route!.path = curr.path
               route!.name = curr.name
@@ -94,7 +94,7 @@ export default defineConfig({
 
         // 首页重定向设置
         const indexRouteTemp = temp_routes.find(gra => gra.path === '/')
-        if(indexRouteTemp){
+        if (indexRouteTemp) {
           indexRouteTemp.redirect = '/launch'
         }
 
