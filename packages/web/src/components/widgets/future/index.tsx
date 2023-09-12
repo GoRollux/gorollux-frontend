@@ -19,10 +19,10 @@ export default defineComponent({
         title: 'Govern on-chain transparency'
       },
       {
-        title: 'Listed on wechart.io automacally'
+        title: 'Listed on tokenchart.in automacally'
       },
       {
-        title: 'One stop shop to trade on wedex.finance'
+        title: 'One stop shop to trade on app.pegasys.fi'
       }
     ]
 

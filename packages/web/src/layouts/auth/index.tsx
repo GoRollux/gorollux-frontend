@@ -15,8 +15,7 @@ const AuthLayout = defineComponent({
         flag: 'AuthLayout',
         withoutJump: true
       })
-      console.log('userIsSet', userIsSet)
-      if (route.path === '/auth/association') {
+      if (['/auth/association','/','/invite','/launch'].includes(route.path)) {
         return
       } else if (userIsSet) {
         // const loginRedirect = storage('session').get('login:redirect')

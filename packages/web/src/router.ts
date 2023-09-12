@@ -5,6 +5,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = setupLayouts(generatedRoutes)
 console.log('routes====>',routes);
+
+
 const router = createRouter({
   history: createWebHistory(),
   // ...

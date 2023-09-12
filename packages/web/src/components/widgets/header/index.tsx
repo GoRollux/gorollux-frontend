@@ -64,7 +64,7 @@ export default defineComponent({
           </div>
 
           <div class="flex items-center">
-            <UButton
+            {/* <UButton
               strong
               round
               type="primary"
@@ -76,6 +76,18 @@ export default defineComponent({
               onClick={this.walletLogin}
             >
               Connect Account
+            </UButton> */}
+            <UButton
+              strong
+              round
+              type="primary"
+              size="small"
+              style={{
+                '--n-border-radius': '2px'
+              }}
+              onClick={()=>this.router.push('/project/list')}
+            >
+              Launch app
             </UButton>
           </div>
         </div>

@@ -6,9 +6,13 @@ export const layoutGroupedRoutes = {
   // default: ['*']
 } as const
 
+// 复制/auth/login配置到invite、launch路由
 export const morePath = {
-  '/auth/login': {
-    name: 'invite',
-    path: '/invite'
-  }
+  '/auth/login': [{
+      name: 'invite',
+      path: '/invite'
+    },{
+      name: 'launch',
+      path: '/launch'
+    }]
 } as const
