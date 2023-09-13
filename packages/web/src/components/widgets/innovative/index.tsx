@@ -21,6 +21,8 @@ import mission2 from '@/assets/20220725/mission@2x.png'
 import mission3 from '@/assets/20220725/mission@3x.png'
 import { handleSrcset } from '@/utils/srcset'
 
+import Partners  from './partners';
+
 export default defineComponent({
   name: 'Innovative',
   setup() {
@@ -102,8 +104,11 @@ export default defineComponent({
             )
           })}
         </div>
+        
+        <Partners/>
+
         {/* <md:h-67.5 */}
-        <div class="flex mx-auto my-118px justify-center <sm:my-10 <sm:w-[90%] <md:mt-19.5 <md:mb-39.5 <md:max-h-[12vh] <md:w-155.5">
+        <div class="flex mx-auto my-118px mb-0 justify-center <sm:my-10 <sm:mb-0 <sm:w-[90%] <md:mt-19.5 <md:mb-0 <md:max-h-[12vh] <md:w-155.5">
           <img srcset={`${mission}, ${mission2} 2x, ${mission3} 3x`} src={mission} />
         </div>
       </>

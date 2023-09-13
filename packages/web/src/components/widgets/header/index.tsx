@@ -1,7 +1,7 @@
 import { UButton } from '@comunion/components'
 import { defineComponent, onMounted, onUnmounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import logo from '@/assets/textLogo.svg'
+import TextLogo from '@/components/Icons/TextLogo'
 import { useWalletStore } from '@/stores'
 
 export default defineComponent({
@@ -60,7 +60,8 @@ export default defineComponent({
           }}
         >
           <div class="flex w-32 items-center <sm:w-30">
-            <img src={logo} class="w-full" />
+            {/* <img src={Logo} class="w-full" /> */}
+            <TextLogo/>
           </div>
 
           <div class="flex items-center">
