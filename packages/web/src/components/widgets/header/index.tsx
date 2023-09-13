@@ -88,7 +88,7 @@ export default defineComponent({
               }}
               onClick={() => this.router.push('/project/list')}
             >
-              Launch app
+              Launch App
             </UButton>
           </div>
         </div>
