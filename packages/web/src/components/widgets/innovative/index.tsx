@@ -108,8 +108,8 @@ export default defineComponent({
         <Partners/>
 
         {/* <md:h-67.5 */}
-        <div class="flex mx-auto my-118px mb-0 justify-center <sm:my-10 <sm:mb-0 <sm:w-[90%] <md:mt-19.5 <md:mb-0 <md:max-h-[12vh] <md:w-155.5">
-          <img srcset={`${mission}, ${mission2} 2x, ${mission3} 3x`} src={mission} />
+        <div class="max-w-[1120px] flex mx-auto my-118px w-[100%] mb-0 justify-center <sm:my-10 <sm:mb-0 <sm:w-[90%] <md:mt-19.5 <md:mb-0 <md:max-h-[12vh] <md:w-155.5">
+          <img srcset={`${mission}, ${mission2} 2x, ${mission3} 3x`} src={mission} class="w-[100%]"/>
         </div>
       </>
     )
