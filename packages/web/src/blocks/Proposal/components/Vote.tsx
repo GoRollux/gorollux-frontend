@@ -119,7 +119,7 @@ export const Vote = defineComponent({
                   class={[
                     'mb-4 p-4 bg-white rounded flex justify-between items-center',
                     { 'border cursor-pointer': voting.value !== this.proposalInfo.vote },
-                    { 'bg-[#5E18FE1A]': voting.value === this.proposalInfo.vote }
+                    { 'bg-[#65B4001A]': voting.value === this.proposalInfo.vote }
                   ]}
                   onClick={() => this.choiceOption(voting.value)}
                 >

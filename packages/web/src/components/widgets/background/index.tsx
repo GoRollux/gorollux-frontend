@@ -20,7 +20,7 @@ export default defineComponent({
     const bubble2 = [bgBubble2, bgBubble2_2, bgBubble2_3]
     const bg2 = handleSrcset(bubble2)
     return (
-      <>
+      <div class="hidden">
         <div class="top-[92vh] right-0 left-0 absolute">
           <img class="w-full" srcset={bg1} src={bgBubble1} />
         </div>
@@ -36,7 +36,7 @@ export default defineComponent({
         <div class="bottom-700px left-0px absolute <md:bottom-696">
           <img class="w-full <md:h-32.5 <md:w-16.25" src={bgBubble3} />
         </div>
-      </>
+      </div>
     )
   }
 })

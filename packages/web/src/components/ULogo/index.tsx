@@ -1,6 +1,6 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 import { defineComponent } from 'vue'
-import LogoImage from '@/assets/logo.png'
+import LogoImage from '@/components/Icons/TextLogo'
 
 export const ULogoProps = {
   theme: {
@@ -23,7 +23,7 @@ const ULogo = defineComponent({
   name: 'ULogo',
   props: ULogoProps,
   setup(props) {
-    return () => <img src={LogoImage} style={{ height: props.height + 'px' }} />
+    return () => <LogoImage/>
   }
 })
 

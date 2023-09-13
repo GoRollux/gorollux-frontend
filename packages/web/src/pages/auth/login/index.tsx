@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router'
 
 import Background from '@/components/widgets/background'
 import Benefits from '@/components/widgets/benefits'
-import BgImage from '@/components/widgets/bgImage'
+// import BgImage from '@/components/widgets/bgImage'
 import Comunion from '@/components/widgets/comunion'
 import Ecomomy from '@/components/widgets/ecomomy'
 import Future from '@/components/widgets/future'
@@ -63,8 +63,8 @@ export default defineComponent({
   render() {
     const currentYear = new Date().getFullYear()
     return (
-      <div class="bg-[#ededf2]">
-        <BgImage />
+      <div class="bg-[#ffffff]">
+        {/* <BgImage /> */}
         <Background />
         <Header />
         <Overview />
@@ -75,7 +75,7 @@ export default defineComponent({
         <Benefits />
         <Innovative />
 
-        <div class="mx-auto max-w-1120px py-6 <sm:w-[90%]">
+        <div class="mx-auto max-w-1120px py-4 text-right <sm:w-[90%]">
           Powered by
           <a class="text-primary px-1" href="https://twitter.com/WEconomyNetwork" target="_blank">
             WEconomy.network

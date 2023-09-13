@@ -33,7 +33,7 @@ export default defineComponent({
           class="bg-transparent mx-auto grid grid-rows-4 grid-cols-6 grid-cols-[279px,136px,143px,138px,141px,276px] grid-rows-[180px,180px,180px,180px] <md:hidden"
           style={{ backgroundColor: 'rgba(255,255,255,0.6)' }}
         >
-          <div class="border border-solid bg-[#5E18FE] text-white pt-54px pl-48px col-start-1 col-end-3 row-start-1 row-end-3">
+          <div class="border border-solid bg-[#65B400] text-white pt-54px pl-48px col-start-1 col-end-3 row-start-1 row-end-3">
             <h1 class={styles.title36}>Lauch</h1>
             <h1 class={`${styles.title36} -mt-10px`}>a Startup</h1>
             <p class={`${styles.title14} text-white opacity-50 mt-16px`}>
@@ -120,7 +120,7 @@ export default defineComponent({
           class="bg-transparent mx-auto w-full grid grid-cols-[12.8fr,7.4fr,6.6fr,14fr] grid-rows-[12.8fr,12.8fr,10.6fr,10.6fr,12.8fr] <sm:text-[12px] <sm:w-[92%] md:hidden"
           style={{ backgroundColor: 'rgba(255,255,255,0.6)' }}
         >
-          <div class="border border-solid bg-[#5E18FE] text-white pl-10 col-start-1 col-end-3 row-start-1 row-end-3 <sm:pt-4 <sm:pl-5">
+          <div class="border border-solid bg-[#65B400] text-white pl-10 col-start-1 col-end-3 row-start-1 row-end-3 <sm:pt-4 <sm:pl-5">
             <h1 class={styles.title30}>Lauch</h1>
             <h1 class={`${styles.title30} -mt-10px`}>a startup</h1>
             <p class={`${styles.title20} mt-4 text-white/70`}>

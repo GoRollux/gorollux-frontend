@@ -21,6 +21,8 @@ import mission2 from '@/assets/20220725/mission@2x.png'
 import mission3 from '@/assets/20220725/mission@3x.png'
 import { handleSrcset } from '@/utils/srcset'
 
+import Partners  from './partners';
+
 export default defineComponent({
   name: 'Innovative',
   setup() {
@@ -65,7 +67,7 @@ export default defineComponent({
             const srcset = handleSrcset(item.icons)
             return (
               <div
-                class={`grid gap-x-30px gap-y-33px w-540px h-224px bg-[rgba(255,255,255,0.4)] rounded-2px ${str0} ${str1} hover:bg-white`}
+                class={`border-solid border-1 grid gap-x-30px gap-y-33px w-540px h-224px rounded-2px ${str0} ${str1} hover:bg-[#f4f4f7]`}
                 key={item.title}
               >
                 <h1 class="flex font-bold ml-32px text-24px text-[#111] col-start-1 col-end-2 row-start-1 row-end-2 items-end">
@@ -102,9 +104,12 @@ export default defineComponent({
             )
           })}
         </div>
+        
+        <Partners/>
+
         {/* <md:h-67.5 */}
-        <div class="flex mx-auto my-118px justify-center <sm:my-10 <sm:w-[90%] <md:mt-19.5 <md:mb-39.5 <md:max-h-[12vh] <md:w-155.5">
-          <img srcset={`${mission}, ${mission2} 2x, ${mission3} 3x`} src={mission} />
+        <div class="max-w-[1120px] flex mx-auto my-118px w-[100%] mb-0 justify-center <sm:my-10 <sm:mb-0 <sm:w-[90%] <md:mt-19.5 <md:mb-0 <md:max-h-[12vh] <md:w-155.5">
+          <img srcset={`${mission}, ${mission2} 2x, ${mission3} 3x`} src={mission} class="w-[100%]"/>
         </div>
       </>
     )

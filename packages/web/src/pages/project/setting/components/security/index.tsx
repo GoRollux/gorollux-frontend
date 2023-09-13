@@ -47,10 +47,37 @@ export default defineComponent({
       }
     )
 
+    const KycTitle = () => (
+      <>
+        KYC
+        <small class="text-12px text-[#979797]">
+          &nbsp;&nbsp;&nbsp;Get KYC via{' '}
+          <a href="http://assuredefi.com/" target="_blank" class="underline hover:text-[#1f2225]">
+            assuredefi.com
+          </a>
+        </small>
+      </>
+    )
+    const ContractTitle = () => (
+      <>
+        Contract Audit
+        <small class="text-12px text-[#979797]">
+          &nbsp;&nbsp;&nbsp;Get Audit via{' '}
+          <a href="https://cyrex.tech/" target="_blank" class="underline  hover:text-[#1f2225]">
+            cyrex.tech
+          </a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="https://hacken.io/" target="_blank" class="underline  hover:text-[#1f2225]">
+            hacken.io
+          </a>
+        </small>
+      </>
+    )
+
     const fields: FormFactoryField[] = [
       {
         t: 'string',
-        title: 'KYC',
+        title: (<KycTitle />) as any,
         name: 'kyc',
         placeholder: 'Input project KYC',
         rules: [
@@ -72,7 +99,7 @@ export default defineComponent({
       },
       {
         t: 'string',
-        title: 'Contract Audit',
+        title: (<ContractTitle />) as any,
         name: 'contract_audit',
         placeholder: 'Input project contract audit',
         rules: [

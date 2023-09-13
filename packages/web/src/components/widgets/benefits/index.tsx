@@ -48,6 +48,10 @@ import benefit9_2 from '@/assets/20220725/benefit9@2x.png'
 import benefit9_3 from '@/assets/20220725/benefit9@3x.png'
 import { handleSrcset } from '@/utils/srcset'
 
+import benefit_bg from '@/assets/20220725/benefitsBg.png'
+import benefit_bg_2 from '@/assets/20220725/benefitsBg@2x.png'
+import benefit_bg_3 from '@/assets/20220725/benefitsBg@3x.png'
+
 export default defineComponent({
   name: 'Benefits',
   setup() {
@@ -109,7 +113,11 @@ export default defineComponent({
     return (
       <div
         style={{
-          background: 'linear-gradient(135deg, #5E18FE 0%, #45249F 100%)'
+          backgroundColor: '#000',
+          backgroundImage: `image-set(url(${benefit_bg}) 1x, url(${benefit_bg_2}) 2x, url(${benefit_bg_3}) 3x)`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: '100% bottom',
+          backgroundSize: 'auto 100%'
         }}
         class="mt-60 w-full pt-40 pb-40 relative <sm:mt-30 <sm:pb-20"
       >

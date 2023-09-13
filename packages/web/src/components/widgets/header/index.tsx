@@ -1,7 +1,7 @@
 import { UButton } from '@comunion/components'
 import { defineComponent, onMounted, onUnmounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import logo from '@/assets/textLogo.svg'
+import TextLogo from '@/components/Icons/TextLogo'
 import { useWalletStore } from '@/stores'
 
 export default defineComponent({
@@ -60,11 +60,12 @@ export default defineComponent({
           }}
         >
           <div class="flex w-32 items-center <sm:w-30">
-            <img src={logo} class="w-full" />
+            {/* <img src={Logo} class="w-full" /> */}
+            <TextLogo/>
           </div>
 
           <div class="flex items-center">
-            <UButton
+            {/* <UButton
               strong
               round
               type="primary"
@@ -76,6 +77,18 @@ export default defineComponent({
               onClick={this.walletLogin}
             >
               Connect Account
+            </UButton> */}
+            <UButton
+              strong
+              round
+              type="primary"
+              size="small"
+              style={{
+                '--n-border-radius': '2px'
+              }}
+              onClick={() => this.router.push('/project/list')}
+            >
+              Launch App
             </UButton>
           </div>
         </div>

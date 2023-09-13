@@ -77,16 +77,27 @@ export default defineConfig({
       onRoutesGenerated(routes) {
         const morePathKey = Object.keys(morePath)
         let temp_routes = routes
+
+        // 别名配置
         morePathKey.forEach(item => {
           let route: { path: string; name: string } | undefined = undefined
           route = temp_routes.find(gra => gra.path === item)
           if (route) {
-            route = JSON.parse(JSON.stringify(route))
-            route!.path = morePath[item].path
-            route!.name = morePath[item].name
-            temp_routes = [...temp_routes, route]
+            morePath[item].forEach(curr => {
+              route = JSON.parse(JSON.stringify(route))
+              route!.path = curr.path
+              route!.name = curr.name
+              temp_routes = [...temp_routes, route]
+            })
           }
         })
+
+        // 首页重定向设置
+        const indexRouteTemp = temp_routes.find(gra => gra.path === '/')
+        if (indexRouteTemp) {
+          indexRouteTemp.redirect = '/launch'
+        }
+
         return temp_routes
       }
     }),

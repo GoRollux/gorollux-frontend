@@ -68,13 +68,22 @@ const TheHeader = defineComponent({
           subMenu: MarketplaceSubMenu
         },
         {
-          name: 'Chart',
+          name: 'TokenChart',
           icon: (
             <ShareOutlined
               class={globalConfigStore.isLargeScreen ? 'h-3.5 w-3.5' : 'h-4 w-4 text-color2'}
             />
           ),
           link: '//wechart.io/rollux'
+        },
+        {
+          name: 'L2Fees',
+          icon: (
+            <ShareOutlined
+              class={globalConfigStore.isLargeScreen ? 'h-3.5 w-3.5' : 'h-4 w-4 text-color2'}
+            />
+          ),
+          link: '//l2fees.info/'
         }
       ]
     })
@@ -170,7 +179,7 @@ const TheHeader = defineComponent({
             onClick={this.goHome}
           >
             <ULogo height={this.globalConfigStore.isLargeScreen ? 28 : 36} />
-            <span class="font-600 text-lg ml-1 text-[#636366] hidden 1366:block">GoRollux</span>
+            {/* <span class="font-600 text-lg ml-1 text-[#636366] hidden 1366:block">GoRollux</span> */}
           </div>
           <div class="flex-1 hidden <lg:block">
             <MobileNav class="h-10 ml-2 w-10" navigations={this.navigations} />
