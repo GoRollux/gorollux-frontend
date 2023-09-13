@@ -19,7 +19,7 @@ export default defineComponent({
   setup() {
     const list = [
       [img_p1, img_p1_2, img_p1_3],
-      [img_p3, img_p3_3, img_p3_3],
+      [img_p3, img_p3_2, img_p3_3],
       [img_p2, img_p2_2, img_p2_3],
     ]
     return ()=>(
