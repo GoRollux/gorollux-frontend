@@ -76,7 +76,7 @@ export default defineComponent({
             const srcset = handleSrcset(item.icons)
             return (
               <div
-                class={`${styles.hoverBox} ${animate['undefined-back-pulse']} flex flex-col flex-grow-0 flex-shrink-0 w-556px h-316px pl-48px ${animate['undefined-border-fade']} hover:text-primary`}
+                class={`${styles.hoverBox} ${animate['undefined-back-pulse']} flex flex-col flex-grow-0 flex-shrink-0 w-556px h-400px pl-48px ${animate['undefined-border-fade']} hover:text-primary`}
                 key={item.h1line1}
               >
                 <div class="h-12 mt-12 w-12">
