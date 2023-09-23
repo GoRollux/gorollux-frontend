@@ -33,10 +33,10 @@ export default defineComponent({
     const list = [
       {
         icons: [comp1, comp1, comp1],
-        h1line1: 'A new era of economy',
+        h1line1: 'A New Wave of Opportunity',
         h1line2: 'Net-Chain Economy',
         content:
-          'The core theory is based on technology of internet and blockchain to research how can increase income of labor through promoting labor’s liquidity and the capitalization of labor value'
+          'This idea is all about using the power of the internet and blockchain technology to figure out ways to help people discover new work opportunities and enhancing the value of the work they do within the economy.Generate much higher efficient collaboration power through linking distributed labors and fragmented productivity to build. It is born from the DAO concept, but goes beyond it.'
       },
       {
         icons: [comp2, comp2, comp2],
@@ -50,14 +50,14 @@ export default defineComponent({
         h1line1: 'A new startup and innovation paradigm',
         h1line2: 'GoRollux',
         content:
-          'The new startup paradigm which is formed by bounty, dCrowdfunding, on-chain governance and other dApps that help everyone to launch and manage their startup without limiting          '
+          'The new startup paradigm which is formed by bounty, decentralized Crowdfunding, on-chain governance and other dApps that help everyone to launch and manage their startup without limitations'
       },
       {
         icons: [comp4, comp4, comp4],
         h1line1: 'A new group of workers',
         h1line2: 'Buidler',
         content:
-          'They are gig workers, remoters, freelancers, builders or contributors etc who yearn for freedom living and working, especially want to change destiny'
+          'They are individuals like freelancers, remote workers, and gig workers who desire the freedom to live and work on their own terms. Take control and earn from posted job opportunities'
       }
     ]
     return {
@@ -69,7 +69,7 @@ export default defineComponent({
       <div class="flex flex-col items-center">
         <Title
           title="What is GoRollux"
-          subTitle="Generates an all-in-one meeting place for being dedicated to building a thriving and collaborative ecosystem, community, and economy"
+          subTitle="Explore GoRollux: Your Launchpad to the Web3 Revolution. Dive into a thriving community where collaboration fuels innovation and collective growth."
         />
         <div class="flex flex-row flex-wrap mx-auto mt-20 max-w-1120px <sm:mt-10 <md:hidden">
           {this.list.map((item, $index) => {

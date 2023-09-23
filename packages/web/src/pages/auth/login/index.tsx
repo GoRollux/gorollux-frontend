@@ -10,7 +10,7 @@ import Future from '@/components/widgets/future'
 import Header from '@/components/widgets/header'
 import Innovative from '@/components/widgets/innovative'
 import Overview from '@/components/widgets/overview'
-import Revolutionary from '@/components/widgets/revolutionary'
+// import Revolutionary from '@/components/widgets/revolutionary'
 import { useOnLoggedIn } from '@/hooks'
 import { useUserStore, useWalletStore } from '@/stores'
 import { UserResponse } from '@/types'
@@ -70,7 +70,7 @@ export default defineComponent({
         <Overview />
         <Comunion />
         <Ecomomy />
-        <Revolutionary />
+        {/* <Revolutionary /> */}
         <Future />
         <Benefits />
         <Innovative />

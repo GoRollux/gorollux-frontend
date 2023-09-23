@@ -56,7 +56,7 @@ export default defineComponent({
             </div>
           </div>
           <div class="border pt-32px pl-36px col-start-6 col-end-7 row-start-1 row-end-2">
-            <h1 class={styles.title24}>Raise money</h1>
+            <h1 class={styles.title24}>Crowd sourced funding</h1>
             <div class="h-54px mt-30px w-54px">
               <img
                 class="w-full"
@@ -86,8 +86,8 @@ export default defineComponent({
             </div>
           </div>
           <div class="border pt-52px pl-32px col-start-2 col-end-4 row-start-3 row-end-4">
-            <h1 class={styles.title24}>Invest</h1>
-            <h1 class={`${styles.title24} -mt-10px`}>early startups</h1>
+            <h1 class={styles.title24}>Discover</h1>
+            <h1 class={`${styles.title24} -mt-10px`}>the newest projects</h1>
           </div>
           <div class="border pt-36px pl-32px col-start-2 col-end-5 row-start-4 row-end-5">
             <h1 class={styles.title24}>Buy and Sell</h1>
@@ -143,7 +143,7 @@ export default defineComponent({
             </div>
           </div>
           <div class="border pl-9 col-start-3 col-end-5 row-start-2 row-end-3 <sm:pt-4 <sm:pl-5">
-            <h1 class={styles.title26}>Raise money</h1>
+            <h1 class={styles.title26}>Crowd sourced funding</h1>
             <div class="h-10.5 mt-12.5 w-10.5  <sm:mt-5">
               <img
                 class="w-full"
@@ -173,8 +173,8 @@ export default defineComponent({
             </div>
           </div>
           <div class="border col-start-2 col-end-4 row-start-3 row-end-4 <sm:pt-5 <sm:pl-4">
-            <h1 class={styles.title26}>Invest</h1>
-            <h1 class={`${styles.title26} -mt-2.5`}>early startups</h1>
+            <h1 class={styles.title26}>Discover</h1>
+            <h1 class={`${styles.title26} -mt-2.5`}>the newest projects</h1>
           </div>
           <div class="border col-start-1 col-end-3 row-start-5 row-end-6 <sm:pt-6 <sm:pl-4">
             <h1 class={styles.title26}>Buy and Sell</h1>
