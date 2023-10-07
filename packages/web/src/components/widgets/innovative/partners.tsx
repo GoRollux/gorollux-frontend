@@ -5,9 +5,9 @@ import img_p1 from '@/assets/20220725/parent1.png'
 import img_p1_2 from '@/assets/20220725/parent1@2x.png'
 import img_p1_3 from '@/assets/20220725/parent1@3x.png'
 
-import img_p2 from '@/assets/20220725/parent2.png'
-import img_p2_2 from '@/assets/20220725/parent2@2x.png'
-import img_p2_3 from '@/assets/20220725/parent2@3x.png'
+// import img_p2 from '@/assets/20220725/parent2.png'
+// import img_p2_2 from '@/assets/20220725/parent2@2x.png'
+// import img_p2_3 from '@/assets/20220725/parent2@3x.png'
 
 import img_p3 from '@/assets/20220725/parent3.png'
 import img_p3_2 from '@/assets/20220725/parent3@2x.png'
