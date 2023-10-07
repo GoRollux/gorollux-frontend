@@ -1,3 +1,3 @@
 export * from './erc20'
 export * from './saleLaunchpadProd'
-export * from './dev'
+export * from './prod'
