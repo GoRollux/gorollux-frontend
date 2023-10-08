@@ -57,7 +57,7 @@ export default defineComponent({
           </div>
           <div class="border pt-32px pl-36px col-start-6 col-end-7 row-start-1 row-end-2">
             <h1 class={styles.title24}>Crowd sourced funding</h1>
-            <div class="h-54px mt-30px w-54px">
+            <div class="h-54px mt-10px w-54px">
               <img
                 class="w-full"
                 srcset={`${wallet}, ${wallet2} 2x, ${wallet3} 3x`}
