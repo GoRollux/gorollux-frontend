@@ -30,26 +30,26 @@ const TheHeader = defineComponent({
         }
       ]
 
-      const ProjectSubMenu = [
-        {
-          name: 'All Project',
-          url: '/project/list',
-          isActive: currentRoute.value.indexOf('/project') !== -1
-        },
-        {
-          name: 'Rollux Recommendations',
-          url: '/governance/list',
-          isActive: currentRoute.value.indexOf('/governance') !== -1
-        }
-      ]
+      // const ProjectSubMenu = [
+      //   {
+      //     name: 'All Project',
+      //     url: '/project/list',
+      //     isActive: currentRoute.value.indexOf('/project') !== -1
+      //   },
+      //   {
+      //     name: 'Rollux Recommendations',
+      //     url: '/governance/list',
+      //     isActive: currentRoute.value.indexOf('/governance') !== -1
+      //   }
+      // ]
 
-      const MarketplaceSubMenu = [
-        {
-          name: 'Bounty',
-          url: '/bounty/list',
-          isActive: currentRoute.value.indexOf('/bounty') !== -1
-        }
-      ]
+      // const MarketplaceSubMenu = [
+      //   {
+      //     name: 'Bounty',
+      //     url: '/bounty/list',
+      //     isActive: currentRoute.value.indexOf('/bounty') !== -1
+      //   }
+      // ]
 
       return [
         {

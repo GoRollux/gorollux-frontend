@@ -3,7 +3,7 @@ import {
   InfoOutlined,
   SecurityOutlined,
   FinanceOutlined,
-  TeamOutlined,
+  // TeamOutlined,
   SocialOutlined,
   GovernenceOutlined,
   SequenceOutlined,
