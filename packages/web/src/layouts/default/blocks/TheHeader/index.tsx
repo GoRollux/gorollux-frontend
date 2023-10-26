@@ -32,12 +32,12 @@ const TheHeader = defineComponent({
 
       const ProjectSubMenu = [
         {
-          name: 'Project',
+          name: 'All Project',
           url: '/project/list',
           isActive: currentRoute.value.indexOf('/project') !== -1
         },
         {
-          name: 'Governance',
+          name: 'Rollux Recommendations',
           url: '/governance/list',
           isActive: currentRoute.value.indexOf('/governance') !== -1
         }
@@ -54,8 +54,9 @@ const TheHeader = defineComponent({
       return [
         {
           name: 'Project',
-          isActive: ProjectSubMenu.filter(e => e.isActive).length > 0,
-          subMenu: ProjectSubMenu
+          isActive: currentRoute.value.indexOf('/project') !== -1,
+          link:'/project/list'
+          // subMenu: ProjectSubMenu
         },
         {
           name: 'Launchpad',
@@ -63,11 +64,26 @@ const TheHeader = defineComponent({
           subMenu: FinanceSubMenu
         },
         {
-          name: 'Marketplace',
-          isActive: MarketplaceSubMenu.filter(e => e.isActive).length > 0,
-          subMenu: MarketplaceSubMenu
+          name: 'Bounty',
+          isActive: currentRoute.value.indexOf('/bounty') !== -1,
+          // subMenu: MarketplaceSubMenu
+          link:'/bounty/list'
         },
         {
+          name: 'Governance',
+          isActive: currentRoute.value.indexOf('/governance') !== -1,
+          link:'/governance/list'
+        },
+        {
+          name: 'CreateToken',
+          icon: (
+            <ShareOutlined
+              class={globalConfigStore.isLargeScreen ? 'h-3.5 w-3.5' : 'h-4 w-4 text-color2'}
+            />
+          ),
+          link: 'https://tokentool.app/createToken/eth'
+        }
+        /*{
           name: 'TokenChart',
           icon: (
             <ShareOutlined
@@ -84,7 +100,7 @@ const TheHeader = defineComponent({
             />
           ),
           link: '//l2fees.info/'
-        }
+        }*/
       ]
     })
 
@@ -147,6 +163,15 @@ const TheHeader = defineComponent({
 
     const goHome = () => router.replace('/')
 
+    
+    const handleLinkClick = (item:{link:string})=>{
+      if(item.link.includes('//')){
+        window.open(item.link)
+      }else{
+        router.push(item.link)
+      }
+    }
+
     return {
       navigations,
       MainMenuActive,
@@ -156,7 +181,8 @@ const TheHeader = defineComponent({
       fixedLogoStyle,
       handleClickLevelOne,
       globalConfigStore,
-      goHome
+      goHome,
+      handleLinkClick
     }
   },
   render() {
@@ -166,19 +192,19 @@ const TheHeader = defineComponent({
       }
     }
 
-    const subMenuStyle = this.navigations[this.MainMenuActive]?.subMenu ? this.stickyStyle : {}
+    const subMenuStyle = this.navigations[this.MainMenuActive]?.subMenu ? this.stickyStyle : {"margin-bottom":"0"}
 
     return (
       <>
         <div
-          class={`px-10 relative top-0 z-3000 <lg:fixed left-0 right-0 <lg:flex items-center <lg:px-4 <lg:py-2 bg-color-body`}
+          class={`px-10 relative top-0 z-11 <lg:z-3000 <lg:fixed left-0 right-0 <lg:flex items-center <lg:px-4 <lg:py-2 bg-color-body`}
         >
           <div
             class="cursor-pointer flex transition-all top-5 left-4 z-10 fixed items-center <lg:static"
             style={this.fixedLogoStyle}
             onClick={this.goHome}
           >
-            <ULogo height={this.globalConfigStore.isLargeScreen ? 28 : 36} />
+            <ULogo height={this.globalConfigStore.isLargeScreen ? 28 : 36}  class="<lg:hidden " />
             {/* <span class="font-600 text-lg ml-1 text-[#636366] hidden 1366:block">GoRollux</span> */}
           </div>
           <div class="flex-1 hidden <lg:block">
@@ -205,8 +231,8 @@ const TheHeader = defineComponent({
                 ) : (
                   <span
                     key={item.name}
-                    class={`flex items-center u-h5 font-bold cursor-pointer px-1 not-last:mr-4`}
-                    onClick={() => item.link && window.open(item.link)}
+                    class={`flex items-center u-h5 font-bold cursor-pointer px-1 not-last:mr-4 ${ item.isActive ? 'text-color1' : '' }`}
+                    onClick={() => this.handleLinkClick(item)}
                   >
                     <span class="mr-1">{item.name}</span>
                     {item.icon}

@@ -153,7 +153,7 @@ const CreateBountyForm = defineComponent({
             applicantsDepositAmount,
             dayjs(bountyInfo.expiresIn).utc().valueOf() / 1000,
             'Create bounty deposit contract on blockchain.',
-            `<div class="flex items-center">Bounty "<span class="max-w-20 truncate">${bountyInfo.title}</span>" is creating</div>`,
+            `<div class="flex items-center">Bounty "<span class="max-w-20 truncate">${bountyInfo.title}</span>" was created</div>`,
             {
               value: depositAmount
             }
@@ -190,7 +190,7 @@ const CreateBountyForm = defineComponent({
             applicantsDepositAmount,
             dayjs(bountyInfo.expiresIn).utc().valueOf() / 1000,
             'Create bounty deposit contract on blockchain.',
-            `<div class="flex items-center">Bounty "<span class="max-w-20 truncate">${bountyInfo.title}</span>" is creating</div>`
+            `<div class="flex items-center">Bounty "<span class="max-w-20 truncate">${bountyInfo.title}</span>" was created</div>`
           )
           console.log(222222222, contractRes)
           return contractRes

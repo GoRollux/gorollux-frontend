@@ -1,7 +1,7 @@
 /**
  * Startup types
  */
-export const STARTUP_TYPES = ['ORG', 'NGO', 'DAO', 'COM', 'DCO'] as const
+export const STARTUP_TYPES = ['ORG', 'NGO', 'DAO', 'COM'] as const
 export type StartupTypesType = typeof STARTUP_TYPES[number]
 export const STARTUP_TYPES_COLOR_MAP = {
   ORG: '#EA4D56', // new 2022.8.26
@@ -31,4 +31,19 @@ export function getStartupTypeFromNumber(mode: number) {
  */
 export function getStartupNumberFromType(type: StartupTypesType) {
   return STARTUP_TYPES.indexOf(type) + 1
+}
+
+/**
+ * filter all
+ */
+export const AllOptionsItem = {label:'ALL',value:''}
+
+/**
+ * types description
+ */
+export const STARTUP_TYPES_DESCRIPTION: Record<typeof STARTUP_TYPES[number], string> =  {
+  'ORG':'(ORG is the Organizations, including non-profit groups)', 
+  'NGO':'(NGO is the Non-Governmental Organizations)', 
+  'DAO':'(DAO is the Distributed Autonomous Corporation)', 
+  'COM':'(COM is the commercial organization)'
 }

@@ -11,7 +11,7 @@ import Overview from './components/overview'
 import Profile from './components/profile'
 import SaleLaunchpad from './components/saleLaunchpad'
 import Security from './components/security'
-import Team from './components/team'
+// import Team from './components/team'
 import { useStartup } from './hooks/useStartup'
 import { useStartupProfile } from './hooks/useStartupProfile'
 import { BootTheTask } from '@/components/BootTheTask'
@@ -279,7 +279,7 @@ export default defineComponent({
                         <PlusFilled class="h-[18px] mt-[3px] w-[18px]" />
                       </div>
                     ),
-                  default: () => `${this.userIsFollow ? 'Unconnect' : 'Connect'}`
+                  default: () => `${this.userIsFollow ? 'Remove' : 'Connect'}`
                 }}
               ></UTooltip>
             </ShareButtonGroup>
@@ -287,7 +287,7 @@ export default defineComponent({
           <div class="w-86 overflow-hidden <lg:w-auto">
             {this.startup && <Profile startup={this.startup} />}
             <Overview content={this.startup?.overview || ''} />
-            <Team startupId={this.paramStartupId} teamDetail={this.startup?.team || []} />
+            {/* <Team startupId={this.paramStartupId} teamDetail={this.startup?.team || []} /> */}
             {(this.startup?.kyc || this.startup?.contract_audit) && (
               <Security
                 kyc={this.startup?.kyc || ''}

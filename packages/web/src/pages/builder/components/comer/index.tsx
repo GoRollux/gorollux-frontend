@@ -397,7 +397,7 @@ export default defineComponent({
                             onClick={() => this.toggleFollow()}
                           >
                             <CheckFilled class="mr-2" />
-                            Unconnect
+                            Remove
                           </UButton>
                         ) : (
                           <UButton type="primary" size="small" onClick={() => this.toggleFollow()}>

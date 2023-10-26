@@ -66,7 +66,7 @@ export default defineComponent({
           v-model:show={this.isOpen}
           width={240}
           style={{
-            top: '58px'
+            top: '56px'
           }}
           placement="left"
           v-slots={{

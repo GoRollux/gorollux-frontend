@@ -76,7 +76,7 @@ export default defineComponent({
           onClick={() => (this.connect ? handleUnconnect() : handleConnect())}
         >
           {/* <CheckFilled class="mr-2" /> */}
-          {this.connect ? 'Unconnect' : 'Connect'}
+          {this.connect ? 'Remove' : 'Connect'}
         </span>
       </div>
     )

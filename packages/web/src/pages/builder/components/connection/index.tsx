@@ -264,7 +264,7 @@ export default defineComponent({
     return !this.viewMode ||
       this.tabsInstance.filter((item: any) => item.totalRows > 0).length > 0 ? (
       <UCard
-        title="Connected"
+        title="Connect"
         class="mb-6"
         v-slots={{
           'header-extra': () => {

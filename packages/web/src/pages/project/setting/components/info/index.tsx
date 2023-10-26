@@ -319,7 +319,7 @@ export default defineComponent({
             const res = await startupContract.createStartup(
               [this.info.name, this.info.chain_id || 0, true],
               'The fields of network and name will be registered to blockchain.',
-              `Project "${this.info.name}" is creating`
+              `Project "${this.info.name}" was created`
             )
             if (res) {
               // message.success('Successfully saved')

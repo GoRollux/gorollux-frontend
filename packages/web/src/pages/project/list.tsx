@@ -14,7 +14,7 @@ import StartupCard from './components/StartupCard'
 import StartupSkeleton from './components/StartupSkeleton'
 import FilterTags from './components/filterTags'
 import SearchInput from '@/components/SearchInput'
-import { StartupTypesType, STARTUP_TYPES } from '@/constants'
+import { StartupTypesType, STARTUP_TYPES, AllOptionsItem } from '@/constants'
 import { services } from '@/services'
 import { useSocketStore, useGlobalConfigStore } from '@/stores'
 import { StartupItem } from '@/types'
@@ -41,6 +41,7 @@ const StartupsPage = defineComponent({
     const TagFilters = ref<string[]>([])
     const DataList = ref<StartupItem[]>([])
     const fetchData = async (reload?: boolean) => {
+      console.log(searchType.value);
       const { error, data } = await services['Startup@get-startups']({
         page: pagination.page,
         size: pagination.pageSize,
@@ -131,6 +132,9 @@ const StartupsPage = defineComponent({
       TagFilters.value = tags
     }
 
+    const options = STARTUP_TYPES.map(item => ({ label: item, value: item }))
+    // options.unshift(AllOptionsItem as any)
+
     return () => (
       <>
         {pagination.loading ? (
@@ -145,7 +149,7 @@ const StartupsPage = defineComponent({
             />
           </div>
           <UDropdownFilter
-            options={STARTUP_TYPES.map(item => ({ label: item, value: item }))}
+            options={options}
             placeholder="Filter"
             class="mr-4 w-28 "
             clearable

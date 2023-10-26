@@ -37,11 +37,11 @@ export default defineComponent({
         key: 'FINANCE',
         icon: () => h(<FinanceOutlined />)
       },
-      {
-        label: () => h(<p>Team</p>),
-        key: 'TEAM',
-        icon: () => h(<TeamOutlined />)
-      },
+      // {
+      //   label: () => h(<p>Team</p>),
+      //   key: 'TEAM',
+      //   icon: () => h(<TeamOutlined />)
+      // },
       {
         label: () => h(<p>Social</p>),
         key: 'SOCIAL',

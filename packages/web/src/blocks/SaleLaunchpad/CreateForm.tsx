@@ -226,7 +226,7 @@ const CreateCrowdfundingForm = defineComponent({
             Number(crowdfundingInfo.buyTokenDecimals)
           ],
           'Create Launchpad contract on blockchain.',
-          `Launchpad is creating`
+          `Launchpad was created`
         )
         await approveRes.wait()
         return contractRes

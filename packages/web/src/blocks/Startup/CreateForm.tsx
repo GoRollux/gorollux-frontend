@@ -9,7 +9,7 @@ import {
   FormFactoryField
 } from '@comunion/components'
 import { defineComponent, PropType, reactive, computed, ref, CSSProperties, h } from 'vue'
-import { STARTUP_TYPES, supportedNetworks } from '@/constants'
+import { STARTUP_TYPES, supportedNetworks, STARTUP_TYPES_DESCRIPTION } from '@/constants'
 import { useStartupContract } from '@/contracts'
 import { useTags } from '@/hooks'
 import { services } from '@/services'
@@ -121,7 +121,7 @@ const CreateStartupForm = defineComponent({
                   true
                 ],
                 'The fields of network and name will be registered to blockchain.',
-                `Project "${model.name}" is creating`
+                `Project "${model.name}" was created`
               )
               if (!res1) {
                 throw new Error('fail')
@@ -329,7 +329,7 @@ const CreateStartupForm = defineComponent({
           title: 'Type',
           name: 'type',
           placeholder: 'Select project type',
-          options: STARTUP_TYPES.map((item, index) => ({ label: item, value: index + 1 })),
+          options: STARTUP_TYPES.map((item, index) => ({ label: `${item} ${STARTUP_TYPES_DESCRIPTION[item]}`, value: index + 1 })),
           rules: [
             {
               required: true,

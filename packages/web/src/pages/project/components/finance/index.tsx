@@ -1,8 +1,11 @@
 import { UAddress, UCard } from '@comunion/components'
 import dayjs from 'dayjs'
-import { defineComponent, PropType, computed } from 'vue'
+import { defineComponent, PropType, computed, ref } from 'vue'
 import { allNetworks } from '@/constants'
 import { StartupDetail } from '@/types'
+import { useGlobalConfigStore } from '@/stores'
+import { message } from '@comunion/components'
+import CreateSaleLaunchpadBlock, { type CreateSaleLaunchRef } from '@/blocks/SaleLaunchpad/Create'
 
 export default defineComponent({
   name: 'StartupFinance',
@@ -12,6 +15,9 @@ export default defineComponent({
     }
   },
   setup(props) {
+    const globalConfigStore = useGlobalConfigStore()
+    const createSaleRef = ref<CreateSaleLaunchRef>()
+    
     const financeBasic = computed(() => {
       // TODO don' know launchNetwork the mean
       const findNet = allNetworks.find(
@@ -94,13 +100,24 @@ export default defineComponent({
         })?.explorerUrl
     )
 
-    return { financeBasic, wallets, blockchainExplorerUrl }
+    const onCreateSale = () => {
+      if (globalConfigStore.isLargeScreen) {
+        createSaleRef.value?.show()
+      } else {
+        message.info(`Note: please switch desktop to create Launchpad`)
+      }
+    }
+
+    return { financeBasic, wallets, blockchainExplorerUrl, onCreateSale, createSaleRef }
   },
   render() {
     const renderList = this.financeBasic.filter(item => !!item.value)
 
     return (
+      <>
+      <CreateSaleLaunchpadBlock ref={(ref: any) => (this.createSaleRef = ref)} />
       <UCard title="Finance" class="mb-6">
+        <div class="absolute top-6.5 right-4 cursor-pointer hover:text-primary" onClick={this.onCreateSale}>Sale Token</div>
         {renderList.length ? (
           <div class="flex flex-col">
             {renderList.map(item => {
@@ -143,6 +160,7 @@ export default defineComponent({
           </div>
         ) : null}
       </UCard>
+      </>
     )
   }
 })

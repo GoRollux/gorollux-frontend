@@ -228,7 +228,7 @@ const CreateCrowdfundingForm = defineComponent({
               : 0
           ],
           'Create Launchpad contract on blockchain.',
-          `Launchpad is creating`
+          `Launchpad was created`
         )
         console.log('here', contractRes)
 
