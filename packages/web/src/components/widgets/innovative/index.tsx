@@ -1,6 +1,7 @@
 import { defineComponent } from 'vue'
 import Title from '../title'
 
+import Partners from './partners'
 import innovative1 from '@/assets/20220725/innovative1.png'
 import innovative1_2 from '@/assets/20220725/innovative1@2x.png'
 import innovative1_3 from '@/assets/20220725/innovative1@3x.png'
@@ -20,8 +21,6 @@ import mission from '@/assets/20220725/mission.png'
 import mission2 from '@/assets/20220725/mission@2x.png'
 import mission3 from '@/assets/20220725/mission@3x.png'
 import { handleSrcset } from '@/utils/srcset'
-
-import Partners  from './partners';
 
 export default defineComponent({
   name: 'Innovative',
@@ -104,12 +103,16 @@ export default defineComponent({
             )
           })}
         </div>
-        
-        <Partners/>
+
+        <Partners />
 
         {/* <md:h-67.5 */}
         <div class="max-w-[1120px] flex mx-auto my-118px w-[100%] mb-0 justify-center <sm:my-10 <sm:mb-0 <sm:w-[90%] <md:mt-19.5 <md:mb-0 <md:max-h-[12vh] <md:w-155.5">
-          <img srcset={`${mission}, ${mission2} 2x, ${mission3} 3x`} src={mission} class="w-[100%]"/>
+          <img
+            srcset={`${mission}, ${mission2} 2x, ${mission3} 3x`}
+            src={mission}
+            class="w-[100%]"
+          />
         </div>
       </>
     )

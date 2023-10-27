@@ -61,7 +61,7 @@ export default defineComponent({
         >
           <div class="flex w-32 items-center <sm:w-30">
             {/* <img src={Logo} class="w-full" /> */}
-            <TextLogo/>
+            <TextLogo />
           </div>
 
           <div class="flex items-center">

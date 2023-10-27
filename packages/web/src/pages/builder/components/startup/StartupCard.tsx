@@ -55,7 +55,10 @@ const StartupCard = defineComponent({
           )}
         </div>
         {isFounder.value && (
-          <span class="text-color3 u-h6 <lg:hidden hover:text-primary" onClick={basicSetting}>
+          <span
+            class="text-color3 u-h6 <lg:hidden hover:text-primary flex items-center"
+            onClick={basicSetting}
+          >
             <SettingOutlined class="cursor-pointer rounded-2 h-4 mr-1 w-4 align-middle" /> Settings
           </span>
         )}

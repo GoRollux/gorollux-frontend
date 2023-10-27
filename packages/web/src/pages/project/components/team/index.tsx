@@ -1,10 +1,10 @@
 import { UCard, ULazyImage } from '@comunion/components'
+import { shortenAddress } from '@comunion/utils'
 import { defineComponent, computed, ref, PropType } from 'vue'
 import { BasicItem } from '@/components/ListItem'
 import LoadingBtn from '@/components/More/loading'
 import { useComer } from '@/pages/builder/hooks/comer'
 import defaultAvatar from '@/pages/project/setting/components/team/assets/avatar.png?url'
-import { shortenAddress } from '@comunion/utils'
 type MemberType = {
   comer?:
     | {
@@ -104,7 +104,9 @@ export default defineComponent({
               ),
               content: () => (
                 <div class="flex-1 overflow-hidden">
-                  <p class="text-color1 truncate u-h5">{item.comer?.address ? shortenAddress(item.comer?.address) : ''}</p>
+                  <p class="text-color1 truncate u-h5">
+                    {item.comer?.address ? shortenAddress(item.comer?.address) : ''}
+                  </p>
                   <p class="truncate u-h7 !px-0 !text-color3">{item.comer?.location}</p>
                 </div>
               )

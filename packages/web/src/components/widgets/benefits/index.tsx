@@ -46,11 +46,11 @@ import benefit8_3 from '@/assets/20220725/benefit8@3x.png'
 import benefit9 from '@/assets/20220725/benefit9.png'
 import benefit9_2 from '@/assets/20220725/benefit9@2x.png'
 import benefit9_3 from '@/assets/20220725/benefit9@3x.png'
-import { handleSrcset } from '@/utils/srcset'
 
 import benefit_bg from '@/assets/20220725/benefitsBg.png'
 import benefit_bg_2 from '@/assets/20220725/benefitsBg@2x.png'
 import benefit_bg_3 from '@/assets/20220725/benefitsBg@3x.png'
+import { handleSrcset } from '@/utils/srcset'
 
 export default defineComponent({
   name: 'Benefits',

@@ -36,14 +36,14 @@ export function getStartupNumberFromType(type: StartupTypesType) {
 /**
  * filter all
  */
-export const AllOptionsItem = {label:'ALL',value:''}
+export const AllOptionsItem = { label: 'ALL', value: '' }
 
 /**
  * types description
  */
-export const STARTUP_TYPES_DESCRIPTION: Record<typeof STARTUP_TYPES[number], string> =  {
-  'ORG':'(ORG is the Organizations, including non-profit groups)', 
-  'NGO':'(NGO is the Non-Governmental Organizations)', 
-  'DAO':'(DAO is the Distributed Autonomous Corporation)', 
-  'COM':'(COM is the commercial organization)'
+export const STARTUP_TYPES_DESCRIPTION: Record<typeof STARTUP_TYPES[number], string> = {
+  ORG: 'ORG is the Organizations, including non-profit groups',
+  NGO: 'NGO is the Non-Governmental Organizations',
+  DAO: 'DAO is the Distributed Autonomous Corporation',
+  COM: 'COM is the commercial organization'
 }

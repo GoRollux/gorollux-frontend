@@ -41,7 +41,7 @@ const StartupsPage = defineComponent({
     const TagFilters = ref<string[]>([])
     const DataList = ref<StartupItem[]>([])
     const fetchData = async (reload?: boolean) => {
-      console.log(searchType.value);
+      console.log(searchType.value)
       const { error, data } = await services['Startup@get-startups']({
         page: pagination.page,
         size: pagination.pageSize,

@@ -1,11 +1,10 @@
-import { UAddress, UCard } from '@comunion/components'
+import { UAddress, UCard, message } from '@comunion/components'
 import dayjs from 'dayjs'
 import { defineComponent, PropType, computed, ref } from 'vue'
-import { allNetworks } from '@/constants'
-import { StartupDetail } from '@/types'
-import { useGlobalConfigStore } from '@/stores'
-import { message } from '@comunion/components'
 import CreateSaleLaunchpadBlock, { type CreateSaleLaunchRef } from '@/blocks/SaleLaunchpad/Create'
+import { allNetworks } from '@/constants'
+import { useGlobalConfigStore } from '@/stores'
+import { StartupDetail } from '@/types'
 
 export default defineComponent({
   name: 'StartupFinance',
@@ -17,7 +16,7 @@ export default defineComponent({
   setup(props) {
     const globalConfigStore = useGlobalConfigStore()
     const createSaleRef = ref<CreateSaleLaunchRef>()
-    
+
     const financeBasic = computed(() => {
       // TODO don' know launchNetwork the mean
       const findNet = allNetworks.find(
@@ -115,51 +114,56 @@ export default defineComponent({
 
     return (
       <>
-      <CreateSaleLaunchpadBlock ref={(ref: any) => (this.createSaleRef = ref)} />
-      <UCard title="Finance" class="mb-6">
-        <div class="absolute top-6.5 right-4 cursor-pointer hover:text-primary" onClick={this.onCreateSale}>Sale Token</div>
-        {renderList.length ? (
-          <div class="flex flex-col">
-            {renderList.map(item => {
-              return (
-                <div class="flex mt-4 items-center">
-                  <p class=" font-medium tracking-normal  text-[14px] w-32 overflow-hidden">
-                    {item.name}
-                  </p>
-                  <p
-                    class={`flex-1 tracking-normal u-h5 overflow-hidden text-color3 ${
-                      item.name.includes('Token Concract') ? 'text-color2' : ''
-                    }`}
-                  >
-                    {item.value}
-                  </p>
-                </div>
-              )
-            })}
-            {(this.wallets || [])?.length > 0 && (
-              <div class="border-color-border  border-t-1 mt-6">
-                <div class="my-6 text-color3 u-h5">Wallet</div>
-
-                {(this.wallets || []).map(item => {
-                  return (
-                    <div class="flex mb-2">
-                      <p class=" font-medium mr-2  tracking-normal text-[14px] w-30 overflow-hidden truncate">
-                        {item.name}
-                      </p>
-                      <UAddress
-                        class=" text-color2"
-                        autoSlice
-                        address={item.value}
-                        blockchainExplorerUrl={`${this.blockchainExplorerUrl}/address/`}
-                      />
-                    </div>
-                  )
-                })}
-              </div>
-            )}
+        <CreateSaleLaunchpadBlock ref={(ref: any) => (this.createSaleRef = ref)} />
+        <UCard title="Finance" class="mb-6">
+          <div
+            class="absolute top-6.5 right-4 cursor-pointer hover:text-primary"
+            onClick={this.onCreateSale}
+          >
+            Sale Token
           </div>
-        ) : null}
-      </UCard>
+          {renderList.length ? (
+            <div class="flex flex-col">
+              {renderList.map(item => {
+                return (
+                  <div class="flex mt-4 items-center">
+                    <p class=" font-medium tracking-normal  text-[14px] w-32 overflow-hidden">
+                      {item.name}
+                    </p>
+                    <p
+                      class={`flex-1 tracking-normal u-h5 overflow-hidden text-color3 ${
+                        item.name.includes('Token Concract') ? 'text-color2' : ''
+                      }`}
+                    >
+                      {item.value}
+                    </p>
+                  </div>
+                )
+              })}
+              {(this.wallets || [])?.length > 0 && (
+                <div class="border-color-border  border-t-1 mt-6">
+                  <div class="my-6 text-color3 u-h5">Wallet</div>
+
+                  {(this.wallets || []).map(item => {
+                    return (
+                      <div class="flex mb-2">
+                        <p class=" font-medium mr-2  tracking-normal text-[14px] w-30 overflow-hidden truncate">
+                          {item.name}
+                        </p>
+                        <UAddress
+                          class=" text-color2"
+                          autoSlice
+                          address={item.value}
+                          blockchainExplorerUrl={`${this.blockchainExplorerUrl}/address/`}
+                        />
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
+            </div>
+          ) : null}
+        </UCard>
       </>
     )
   }

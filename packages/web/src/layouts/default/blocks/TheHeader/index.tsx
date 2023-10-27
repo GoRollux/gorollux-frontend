@@ -55,7 +55,7 @@ const TheHeader = defineComponent({
         {
           name: 'Project',
           isActive: currentRoute.value.indexOf('/project') !== -1,
-          link:'/project/list'
+          link: '/project/list'
           // subMenu: ProjectSubMenu
         },
         {
@@ -64,15 +64,15 @@ const TheHeader = defineComponent({
           subMenu: FinanceSubMenu
         },
         {
-          name: 'Bounty',
+          name: 'Bounties',
           isActive: currentRoute.value.indexOf('/bounty') !== -1,
           // subMenu: MarketplaceSubMenu
-          link:'/bounty/list'
+          link: '/bounty/list'
         },
         {
           name: 'Governance',
           isActive: currentRoute.value.indexOf('/governance') !== -1,
-          link:'/governance/list'
+          link: '/governance/list'
         },
         {
           name: 'CreateToken',
@@ -163,11 +163,10 @@ const TheHeader = defineComponent({
 
     const goHome = () => router.replace('/')
 
-    
-    const handleLinkClick = (item:{link:string})=>{
-      if(item.link.includes('//')){
+    const handleLinkClick = (item: { link: string }) => {
+      if (item.link.includes('//')) {
         window.open(item.link)
-      }else{
+      } else {
         router.push(item.link)
       }
     }
@@ -192,7 +191,9 @@ const TheHeader = defineComponent({
       }
     }
 
-    const subMenuStyle = this.navigations[this.MainMenuActive]?.subMenu ? this.stickyStyle : {"margin-bottom":"0"}
+    const subMenuStyle = this.navigations[this.MainMenuActive]?.subMenu
+      ? this.stickyStyle
+      : { 'margin-bottom': '0' }
 
     return (
       <>
@@ -204,7 +205,7 @@ const TheHeader = defineComponent({
             style={this.fixedLogoStyle}
             onClick={this.goHome}
           >
-            <ULogo height={this.globalConfigStore.isLargeScreen ? 28 : 36}  class="<lg:hidden " />
+            <ULogo height={this.globalConfigStore.isLargeScreen ? 28 : 36} class="<lg:hidden " />
             {/* <span class="font-600 text-lg ml-1 text-[#636366] hidden 1366:block">GoRollux</span> */}
           </div>
           <div class="flex-1 hidden <lg:block">
@@ -231,7 +232,9 @@ const TheHeader = defineComponent({
                 ) : (
                   <span
                     key={item.name}
-                    class={`flex items-center u-h5 font-bold cursor-pointer px-1 not-last:mr-4 ${ item.isActive ? 'text-color1' : '' }`}
+                    class={`flex items-center u-h5 font-bold cursor-pointer px-1 not-last:mr-4 ${
+                      item.isActive ? 'text-color1' : ''
+                    }`}
                     onClick={() => this.handleLinkClick(item)}
                   >
                     <span class="mr-1">{item.name}</span>

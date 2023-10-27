@@ -23,7 +23,7 @@ const ULogo = defineComponent({
   name: 'ULogo',
   props: ULogoProps,
   setup(props) {
-    return () => <LogoImage/>
+    return () => <LogoImage />
   }
 })
 

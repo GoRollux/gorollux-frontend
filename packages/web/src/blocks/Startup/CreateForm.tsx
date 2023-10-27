@@ -8,6 +8,7 @@ import {
   UButton,
   FormFactoryField
 } from '@comunion/components'
+import { NTooltip } from 'naive-ui'
 import { defineComponent, PropType, reactive, computed, ref, CSSProperties, h } from 'vue'
 import { STARTUP_TYPES, supportedNetworks, STARTUP_TYPES_DESCRIPTION } from '@/constants'
 import { useStartupContract } from '@/contracts'
@@ -329,7 +330,13 @@ const CreateStartupForm = defineComponent({
           title: 'Type',
           name: 'type',
           placeholder: 'Select project type',
-          options: STARTUP_TYPES.map((item, index) => ({ label: `${item} ${STARTUP_TYPES_DESCRIPTION[item]}`, value: index + 1 })),
+          renderOption: ({ node, option }: any) => {
+            return h(NTooltip, null, {
+              trigger: () => node,
+              default: () => (STARTUP_TYPES_DESCRIPTION as any)[option.label]
+            })
+          },
+          options: STARTUP_TYPES.map((item, index) => ({ label: `${item}`, value: index + 1 })),
           rules: [
             {
               required: true,

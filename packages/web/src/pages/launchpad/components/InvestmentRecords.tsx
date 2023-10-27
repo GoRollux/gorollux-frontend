@@ -1,4 +1,5 @@
 import { UCard, ULazyImage, UScrollList, UTag } from '@comunion/components'
+import { shortenAddress } from '@comunion/utils'
 import dayjs from 'dayjs'
 import { defineComponent, reactive, ref, onMounted, inject } from 'vue'
 import { useRouter } from 'vue-router'
@@ -129,7 +130,9 @@ export const InvestmentRecords = defineComponent({
                   </div>
                   <div class="flex-1 mx-2 overflow-hidden">
                     <div class="flex mb-1 items-center">
-                      <div class="flex-1 text-color1 truncate u-h5">{record?.comer?.name}</div>
+                      <div class="flex-1 text-color1 truncate u-h5">
+                        {record.comer?.address ? shortenAddress(record.comer?.address) : ''}
+                      </div>
                       <UTag class="ml-2 text-color3 whitespace-nowrap">
                         {record.access === 1 ? 'Invest' : 'Sell'}
                       </UTag>
