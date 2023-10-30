@@ -18,11 +18,14 @@ import {
   ChainNetworkType,
   StartupTypesType,
   getStartupNumberFromType,
-  supportedNetworks
+  supportedNetworks,
+  STARTUP_TYPES_DESCRIPTION
 } from '@/constants'
 import { useStartupContract } from '@/contracts'
 import { useWalletStore } from '@/stores'
 import { useContractStore } from '@/stores/contract'
+import { NTooltip } from 'naive-ui'
+
 type InfoPropType = {
   logo: string
   banner: string
@@ -206,6 +209,12 @@ export default defineComponent({
         name: 'type',
         required: true,
         placeholder: 'Select project type',
+        renderOption: ({ node, option }: any) => {
+          return h(NTooltip, null, {
+            trigger: () => node,
+            default: () => (STARTUP_TYPES_DESCRIPTION as any)[option.label]
+          })
+        },
         options: STARTUP_TYPES.map(item => ({ label: item, value: item }))
       },
       {
