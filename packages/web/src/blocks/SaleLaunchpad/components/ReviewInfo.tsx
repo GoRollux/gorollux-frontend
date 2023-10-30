@@ -68,11 +68,11 @@ export const ReviewInfo = defineComponent({
 
         <div class="review-info-item">
           <div class="w-[220px] title">Launchpad Start Time :</div>
-          <div>{dayjs(this.crowdfundingInfo.startTime).format('YYYY-MM-DD HH:mm')}</div>
+          <div>{dayjs.utc(this.crowdfundingInfo.startTime).format()}</div>
         </div>
         <div class="review-info-item">
           <div class="w-[220px] title">Launchpad End Time :</div>
-          <div>{dayjs(this.crowdfundingInfo.endTime).format('YYYY-MM-DD HH:mm')}</div>
+          <div>{dayjs.utc(this.crowdfundingInfo.endTime).format()}</div>
         </div>
         <div class="review-info-item">
           <div class="w-[220px] title">Listing Option :</div>

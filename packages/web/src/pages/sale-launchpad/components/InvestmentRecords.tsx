@@ -146,7 +146,7 @@ export const InvestmentRecords = defineComponent({
                       </UTag>
                     </div>
                     <div class="mb-2 text-color3 u-h7">
-                      {dayjs(+record.timestamp * 1000).format('YYYY-MM-DD HH:mm')}
+                      {dayjs.utc(+record.timestamp * 1000).format()}
                     </div>
                   </div>
                   <div class="text-primary whitespace-nowrap">{this.getAmount(record)}</div>

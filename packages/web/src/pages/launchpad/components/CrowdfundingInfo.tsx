@@ -178,9 +178,9 @@ export const CrowdfundingInfo = defineComponent({
           <div class="text-color1">Maximum Sell :</div>
           <div>{props.info.max_sell_percent} % of the bought token amount</div>
           <div class="text-color1">Start Time :</div>
-          <div>{dayjs.utc(+(props.info?.start_time || 0)).format('YYYY-MM-DD HH:mm')}</div>
+          <div>{dayjs.utc(+(props.info?.start_time || 0)).format()}</div>
           <div class="text-color1">End Time :</div>
-          <div>{dayjs.utc(+(props.info?.end_time || 0)).format('YYYY-MM-DD HH:mm')}</div>
+          <div>{dayjs.utc(+(props.info?.end_time || 0)).format()}</div>
           <div class="text-color1">Listing Option :</div>
           <div>{isManualListing ? 'Manual Listing' : 'Auto Listing'}</div>
           {!isManualListing && (

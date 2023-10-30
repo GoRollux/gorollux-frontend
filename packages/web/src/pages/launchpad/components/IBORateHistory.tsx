@@ -54,7 +54,7 @@ export const IBORateHistory = defineComponent({
             {/* {(records.value || [])?.map(record => {
               return (
                 <div class="mb-6">
-                  <div class="mb-2 text-color3 u-h6">{dayjs().format('YYYY-MM-DD HH:mm')}</div>
+                  <div class="mb-2 text-color3 u-h6">{dayjs().format()}</div>
                   <div class="bg-purple rounded-sm flex border-1 border-grey5 py-2.5 px-4 justify-between">
                     <span class="u-h4">
                       1 {record.buy_token_symbol} = {record.buy_price} {record.sell_token_symbol}

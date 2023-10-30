@@ -184,9 +184,9 @@ export const CrowdfundingInfo = defineComponent({
           <div>{props.info.max_invest_amount}</div>
 
           <div class="text-color1">Start Time :</div>
-          <div>{dayjs.utc(+(props.info.started_at || 0) * 1000).format('YYYY-MM-DD HH:mm')}</div>
+          <div>{dayjs.utc(+(props.info.started_at || 0) * 1000).format()}</div>
           <div class="text-color1">End Time :</div>
-          <div>{dayjs.utc(+(props.info.ended_at || 0) * 1000).format('YYYY-MM-DD HH:mm')}</div>
+          <div>{dayjs.utc(+(props.info.ended_at || 0) * 1000).format()}</div>
           <div class="text-color1">Listing Option :</div>
           <div>{isManualListing ? 'Manual Listing' : 'Auto Listing'}</div>
           {!isManualListing && (
