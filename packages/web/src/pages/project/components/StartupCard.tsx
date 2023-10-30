@@ -97,7 +97,7 @@ const StartupCard = defineComponent({
             <div class="flex items-center">
               <span class="h-4 px-2 text-color2 inline-block u-h7">
                 <strong class="mr-0.2rem text-color3">{this.startup.connected_total}</strong>
-                {(this.startup?.connected_total || 0) > 1 ? pluralize('Connection') : 'Connection'}
+                {(this.startup?.connected_total || 0) > 1 ? pluralize('Connect') : 'Connect'}
               </span>
               <div class="flex-1"></div>
               {this.startup.kyc && <UTag class="text-color2">KYC</UTag>}

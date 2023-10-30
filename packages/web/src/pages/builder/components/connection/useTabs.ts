@@ -29,7 +29,7 @@ export function useTabs(profile?: ComerProfileState) {
     },
     {
       id: '2',
-      title: 'Connection',
+      title: 'Connect',
       totalRows: converset(count.followerCnt)
     }
   ])
