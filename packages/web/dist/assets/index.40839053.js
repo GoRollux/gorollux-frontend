@@ -1,0 +1,1 @@
+import{u as o,R as e}from"./vue.4357b695.js";import{l as u,bm as a}from"./bundle.0b4742f1.js";import"./tools.88963de1.js";import"./inherits.5710f9ab.js";const n=u({name:"EmptyLayout",setup(){const t=o();return console.log("route.fullPath",t.fullPath),()=>a(e,{key:t.fullPath},null)}});export{n as default};

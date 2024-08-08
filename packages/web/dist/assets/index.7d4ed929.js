@@ -1,0 +1,1 @@
+import{l as r,bm as s,W as a}from"./bundle.0b4742f1.js";import"./tools.88963de1.js";import"./inherits.5710f9ab.js";const d=r({name:"HeaderButton",emits:["click"],setup(i,e){return()=>{var t,o;return s("div",a(e.attrs,{onClick:()=>e.emit("click")}),[(o=(t=e.slots).default)==null?void 0:o.call(t)])}}});export{d as default};

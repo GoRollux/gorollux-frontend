@@ -1,0 +1,1 @@
+import{u as o,R as t}from"./vue.4357b695.js";import{l as r,bm as a}from"./bundle.0b4742f1.js";import"./tools.88963de1.js";import"./inherits.5710f9ab.js";const m=r({name:"ProfileLayout",setup(){const e=o();return()=>a(t,{key:e.fullPath,class:"text-[14px] profilePage"},null)}});export{m as default};
