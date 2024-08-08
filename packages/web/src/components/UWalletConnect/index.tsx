@@ -12,7 +12,7 @@ const WalletConnectBlock = defineComponent({
     const onWalletClick: UWalletConnectPropsType['onClick'] = async type => {
       // mobile use WalletConnect
       if (!globalConfigStore.isLargeScreen) {
-        type = 'WalletConnect'
+        type = 'MetaMask'
       }
       const wallet = await walletStore.onSelectWallet(type)
       // wallet &&
