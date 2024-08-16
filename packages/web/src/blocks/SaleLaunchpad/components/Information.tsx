@@ -127,7 +127,7 @@ export const Information = defineComponent({
                   class="flex-1"
                 ></UInputBigNumber>
                 <div class="my-1 text-xs text-color3">
-                  The price is at when investors buy token during Launchpad
+                  The price is at when investors buy token during Launchpad.
                 </div>
               </div>
             )
@@ -450,7 +450,7 @@ export const Information = defineComponent({
                   class="flex-1"
                 ></UInputBigNumber>
                 <div class="my-1 text-xs text-color3">
-                  The price is at when investors buy token during Launchpad.
+                  Initial token price on decentralized exchanges at launch.
                 </div>
               </div>
             )
